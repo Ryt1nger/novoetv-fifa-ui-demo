@@ -32,6 +32,25 @@
     return base;
   }
 
+  var LIVE_STATUSES = { LIVE: 1, IN_PLAY: 1, IN_PLAY_NOW: 1, PAUSED: 1 };
+
+  function matchHasScore(match) {
+    var s = match && match.score ? match.score : {};
+    var home = s.team1 != null ? s.team1 : s.home;
+    var away = s.team2 != null ? s.team2 : s.away;
+    return home != null && away != null;
+  }
+
+  function enrichDemoChannels(data) {
+    if (!data || !data.demo || !data.matches) return;
+    Object.keys(data.matches).forEach(function (key) {
+      var match = data.matches[key];
+      if (!match || (match.channels && match.channels.length)) return;
+      var live = !!(match.status && LIVE_STATUSES[String(match.status).trim().toUpperCase()]);
+      if (matchHasScore(match) || live) match.channels = ['103'];
+    });
+  }
+
   function isAuditMode() {
     return typeof location !== 'undefined' && new URLSearchParams(location.search).has('audit');
   }
@@ -80,6 +99,8 @@
       return fetchJson(mockUrl('fifa2026-audit-whitelist.json')).then(function (wl) {
         filterMatchesForAudit(cache.fifa2026, wl.matchIds || []);
       }).catch(function () { /* optional */ });
+    }).then(function () {
+      enrichDemoChannels(cache.fifa2026);
     }).then(function () {
       return Promise.all([
         fetchJson(mockUrl('fifa-shell.json')).then(function (data) { cache.shell = data; }),

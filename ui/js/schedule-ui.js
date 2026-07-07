@@ -44,7 +44,7 @@
 
   function syncPlayOverlay(cardEl, match, focused) {
     var play = cardEl.querySelector('.iv_match_play');
-    if (play) play.classList.toggle('visible', !!focused);
+    if (play) play.classList.toggle('visible', !!focused && isPlayable(match));
   }
 
   function flagImg(url, cls) {
@@ -70,7 +70,7 @@
     if (isPlayable(match)) classes.push('playable');
     if (match.matchId === state.selectedMatchId) classes.push('selected');
     if (match.matchId === state.focusedMatchId) classes.push('focused');
-    var showPlay = match.matchId === state.focusedMatchId;
+    var showPlay = match.matchId === state.focusedMatchId && isPlayable(match);
 
     return (
       '<div class="' + classes.join(' ') + '" data-match-id="' + escapeHtml(match.matchId) + '" tabindex="0">' +

@@ -122,16 +122,21 @@
     boundCountries = true;
   }
 
+  function isPlayable(match) {
+    if (!match) return false;
+    return !!(match.channelIds && match.channelIds.length && (match.isLive || match.score));
+  }
+
   function buildMyTeamMatchCard(match) {
     var score = match.score;
     var homeScore = score ? String(score.home) : '';
     var awayScore = score ? String(score.away) : '';
     var classes = ['match_card_root', 'my_team_match', match.availability || 'available'];
-    var playable = !!(match.channelIds && match.channelIds.length && (match.isLive || score));
+    var playable = isPlayable(match);
     if (playable) classes.push('playable');
     if (match.matchId === state.selectedMatchId) classes.push('selected');
     if (match.matchId === state.focusedMatchId) classes.push('focused');
-    var showPlay = match.matchId === state.focusedMatchId;
+    var showPlay = match.matchId === state.focusedMatchId && playable;
 
     return (
       '<div class="' + classes.join(' ') + '" data-match-id="' + escapeHtml(match.matchId) + '" tabindex="0">' +
@@ -279,10 +284,12 @@
       var on = state.focusedMatchId !== null &&
         el.getAttribute('data-match-id') === state.focusedMatchId;
       el.classList.toggle('focused', on);
+      var match = findMatch(id);
+      var showPlay = on && isPlayable(match);
       var play = el.querySelector('.iv_match_play');
-      if (play) play.classList.toggle('visible', on);
+      if (play) play.classList.toggle('visible', showPlay);
       var time = el.querySelector('.tv_time');
-      if (time) time.classList.toggle('hidden-for-play', on);
+      if (time) time.classList.toggle('hidden-for-play', showPlay);
     });
   }
 
