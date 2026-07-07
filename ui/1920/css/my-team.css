@@ -215,8 +215,8 @@
   display: none;
   color: var(--sport-match-play-color);
   background: currentColor;
-  -webkit-mask-image: url('../../assets/img/icons/ic_sport_play.svg');
-  mask-image: url('../../assets/img/icons/ic_sport_play.svg');
+  -webkit-mask-image: url('../../../assets/img/icons/ic_sport_play.svg');
+  mask-image: url('../../../assets/img/icons/ic_sport_play.svg');
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;

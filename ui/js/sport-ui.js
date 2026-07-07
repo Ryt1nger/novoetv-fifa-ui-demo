@@ -21,11 +21,15 @@
     my_team: 'sport_my_team_root'
   };
 
+  function iconPath(file) {
+    return global.FifaAssets ? FifaAssets.icon(file) : '../../assets/img/icons/' + file;
+  }
+
   var ICONS = {
-    football: '../../assets/img/icons/football.svg',
-    tournir_grid: '../../assets/img/icons/tournir_grid.svg',
-    your_team_icon: '../../assets/img/icons/your_team_icon.svg',
-    rail_back: '../../assets/img/icons/ic_sport_rail_back.svg'
+    football: iconPath('football.svg'),
+    tournir_grid: iconPath('tournir_grid.svg'),
+    your_team_icon: iconPath('your_team_icon.svg'),
+    rail_back: iconPath('ic_sport_rail_back.svg')
   };
 
   var state = {

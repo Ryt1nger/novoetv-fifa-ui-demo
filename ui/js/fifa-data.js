@@ -8,6 +8,10 @@
     tvChannels: null
   };
 
+  function mockUrl(file) {
+    return global.FifaAssets ? FifaAssets.mock(file) : '../../mocks/' + file;
+  }
+
   function fetchJson(url) {
     return fetch(url).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status + ' for ' + url);
@@ -51,21 +55,21 @@
   }
 
   function loadAll() {
-    return fetchJson('../../mocks/fifa2026.json').then(function (data) {
+    return fetchJson(mockUrl('fifa2026.json')).then(function (data) {
       cache.fifa2026 = data;
-      return fetchJson('../../mocks/fifa2026-scan-matches.json').then(function (overlay) {
+      return fetchJson(mockUrl('fifa2026-scan-matches.json')).then(function (overlay) {
         mergeScanMatches(cache.fifa2026, overlay);
       }).catch(function () { /* optional */ });
     }).then(function () {
-      return fetchJson('../../mocks/fifa2026-bracket-overlay.json').then(function (overlay) {
+      return fetchJson(mockUrl('fifa2026-bracket-overlay.json')).then(function (overlay) {
         mergeScanMatches(cache.fifa2026, overlay);
       }).catch(function () { /* optional */ });
     }).then(function () {
-      return fetchJson('../../mocks/fifa2026-myteam-scan.json').then(function (overlay) {
+      return fetchJson(mockUrl('fifa2026-myteam-scan.json')).then(function (overlay) {
         mergeScanMatches(cache.fifa2026, overlay);
       }).catch(function () { /* optional */ });
     }).then(function () {
-      return fetchJson('../../mocks/fifa2026-teams.json').then(function (teamsData) {
+      return fetchJson(mockUrl('fifa2026-teams.json')).then(function (teamsData) {
         if (teamsData && teamsData.teams) {
           cache.fifa2026.teams = cache.fifa2026.teams || {};
           Object.assign(cache.fifa2026.teams, teamsData.teams);
@@ -73,14 +77,14 @@
       }).catch(function () { /* optional */ });
     }).then(function () {
       if (!isAuditMode()) return;
-      return fetchJson('../../mocks/fifa2026-audit-whitelist.json').then(function (wl) {
+      return fetchJson(mockUrl('fifa2026-audit-whitelist.json')).then(function (wl) {
         filterMatchesForAudit(cache.fifa2026, wl.matchIds || []);
       }).catch(function () { /* optional */ });
     }).then(function () {
       return Promise.all([
-        fetchJson('../../mocks/fifa-shell.json').then(function (data) { cache.shell = data; }),
-        fetchJson('../../mocks/fifa-broadcast-sources.json').then(function (data) { cache.broadcast = data; }),
-        fetchJson('../../mocks/fifa-tv-channels.json').then(function (data) { cache.tvChannels = data; }).catch(function () { /* optional */ })
+        fetchJson(mockUrl('fifa-shell.json')).then(function (data) { cache.shell = data; }),
+        fetchJson(mockUrl('fifa-broadcast-sources.json')).then(function (data) { cache.broadcast = data; }),
+        fetchJson(mockUrl('fifa-tv-channels.json')).then(function (data) { cache.tvChannels = data; }).catch(function () { /* optional */ })
       ]);
     });
   }

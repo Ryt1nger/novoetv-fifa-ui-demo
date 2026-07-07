@@ -2,17 +2,30 @@
   'use strict';
 
   var REMOTE_URL = 'https://media.api-sports.io/football/teams/%d.png';
-  var LOCAL_URL = '../../assets/img/flags/%d.png';
   var useLocal = true;
+
+  function localFlagUrl(teamId) {
+    if (!teamId || teamId <= 0) return null;
+    if (global.FifaAssets && FifaAssets.flag) return FifaAssets.flag(teamId);
+    return '../../assets/img/flags/' + teamId + '.png';
+  }
+
+  function teamIdFromUrl(url) {
+    var m = String(url || '').match(/(?:teams\/|flags\/)(\d+)\.png/i);
+    return m ? parseInt(m[1], 10) : null;
+  }
 
   function normalizeCrestUrl(url) {
     var trimmed = String(url || '').trim();
     if (!trimmed) return null;
-    if (/\.svg$/i.test(trimmed)) {
-      var id = trimmed.split('/').pop().split('.')[0];
-      if (/^\d+$/.test(id)) return flagUrl(parseInt(id, 10));
+    if (useLocal) {
+      var id = teamIdFromUrl(trimmed);
+      if (id) return localFlagUrl(id);
     }
-    if (/^\/assets\/img\/flags\/\d+\.png$/i.test(trimmed)) return trimmed;
+    if (/\.svg$/i.test(trimmed)) {
+      var svgId = trimmed.split('/').pop().split('.')[0];
+      if (/^\d+$/.test(svgId)) return flagUrl(parseInt(svgId, 10));
+    }
     if (trimmed.indexOf('http://') === 0) return 'https://' + trimmed.slice(7);
     if (trimmed.indexOf('https://') === 0) return trimmed;
     return trimmed;
@@ -20,7 +33,7 @@
 
   function flagUrl(teamId) {
     if (!teamId || teamId <= 0) return null;
-    if (useLocal) return LOCAL_URL.replace('%d', String(teamId));
+    if (useLocal) return localFlagUrl(teamId);
     return REMOTE_URL.replace('%d', String(teamId));
   }
 

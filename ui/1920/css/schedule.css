@@ -151,7 +151,7 @@
   width: var(--schedule-play-icon-size);
   height: var(--schedule-play-icon-size);
   display: none;
-  background: url('../../assets/img/icons/ic_sport_play.svg') center / contain no-repeat;
+  background: url('../../../assets/img/icons/ic_sport_play.svg') center / contain no-repeat;
   z-index: 2;
   pointer-events: none;
 }
