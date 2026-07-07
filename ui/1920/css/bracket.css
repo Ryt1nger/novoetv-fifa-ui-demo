@@ -70,11 +70,6 @@
   color: #1A2D42;
 }
 
-.bracket_cell.selected {
-  background: #FFFFFF;
-  color: #010E21;
-}
-
 .bracket_cell.focused {
   box-shadow: inset 0 0 0 var(--bracket-focus-border) #86DBFF;
 }
@@ -106,11 +101,6 @@
   line-height: 1;
   font-weight: 500;
   margin-top: 2px;
-}
-
-.bracket_cell.selected .tv_date,
-.bracket_cell.selected .tv_time {
-  color: rgba(1, 14, 33, 0.5);
 }
 
 .bracket_cell.live .tv_date,
@@ -174,9 +164,4 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.bracket_cell.selected .tv_team_top,
-.bracket_cell.selected .tv_team_bottom {
-  color: #010E21;
 }

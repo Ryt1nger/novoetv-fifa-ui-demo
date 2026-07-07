@@ -93,7 +93,6 @@
     var match = state.cellMatches[cellId];
     if (!match || !global.BroadcastUI) return;
     setFocusedCell(cellId);
-    setSelectedCell(cellId);
     BroadcastUI.showForMatch(match, 'bracket');
   }
 

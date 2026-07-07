@@ -90,19 +90,9 @@
   color: var(--schedule-match-text-live);
 }
 
-#rv_sport_schedule .match_card_root.selected {
-  background: var(--schedule-match-bg-selected);
-  color: var(--schedule-match-text-selected);
-  border-color: transparent;
-}
-
 #rv_sport_schedule .match_card_root.focused {
   outline: var(--schedule-match-focus-border) solid var(--schedule-match-focus-color);
   outline-offset: 0;
-}
-
-#rv_sport_schedule .match_card_root.selected .tv_group {
-  color: var(--schedule-match-meta-selected);
 }
 
 #rv_sport_schedule .meta_play_slot {

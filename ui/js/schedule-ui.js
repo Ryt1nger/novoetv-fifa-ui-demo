@@ -120,7 +120,6 @@
     var match = findMatch(matchId);
     if (!match || !global.BroadcastUI) return;
     setFocusedMatch(matchId);
-    setSelectedMatch(matchId);
     BroadcastUI.showForMatch(match, 'schedule');
   }
 

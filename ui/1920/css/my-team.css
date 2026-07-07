@@ -165,21 +165,6 @@
   color: #1A2D42;
 }
 
-.my_team_match.selected {
-  background: #FFFFFF;
-  color: #010E21;
-  border-color: transparent;
-}
-
-.my_team_match.selected .tv_time {
-  color: rgba(1, 14, 33, 0.5);
-}
-
-.my_team_match.selected .tv_team_home,
-.my_team_match.selected .tv_team_away {
-  color: #010E21;
-}
-
 .my_team_match.focused {
   outline: var(--my-team-focus-border) solid #86DBFF;
   outline-offset: 0;
@@ -314,12 +299,6 @@
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.4);
-}
-
-.my_team_match.selected .score_container .tv_score_home,
-.my_team_match.selected .score_container .tv_score_away {
-  background: #1A2D42;
-  color: #FFFFFF;
 }
 
 .my_team_match.live .score_container .tv_score_home,
