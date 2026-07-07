@@ -17,6 +17,34 @@
     }
   }
 
+  function isPlayIconVisible(playEl) {
+    if (!playEl || !playEl.classList.contains('visible')) return false;
+    var cs = window.getComputedStyle(playEl);
+    return cs.display !== 'none' && cs.visibility !== 'hidden';
+  }
+
+  function openBroadcastFromPlay(playEl) {
+    var bracketCell = playEl.closest('#bracket_cells_container .bracket_cell');
+    if (bracketCell && global.BracketUI && BracketUI.openBroadcastForCell) {
+      applyShell({ activeTab: 'bracket', railFocus: null, tabFocus: null });
+      BracketUI.openBroadcastForCell(bracketCell.getAttribute('data-cell-id'));
+      return true;
+    }
+    var schedCard = playEl.closest('#rv_sport_schedule .match_card_root');
+    if (schedCard && global.ScheduleUI && ScheduleUI.openBroadcastForMatch) {
+      applyShell({ activeTab: 'schedule', railFocus: null, tabFocus: null });
+      ScheduleUI.openBroadcastForMatch(schedCard.getAttribute('data-match-id'));
+      return true;
+    }
+    var myCard = playEl.closest('#rv_my_team_schedule .match_card_root');
+    if (myCard && global.MyTeamUI && MyTeamUI.openBroadcastForMatch) {
+      applyShell({ activeTab: 'my_team', railFocus: null, tabFocus: null });
+      MyTeamUI.openBroadcastForMatch(myCard.getAttribute('data-match-id'));
+      return true;
+    }
+    return false;
+  }
+
   function onStageClick(e) {
     if (e.target.closest('#dev-panel')) return;
 
@@ -26,6 +54,11 @@
         if (global.BroadcastUI) BroadcastUI.hide();
         return;
       }
+    }
+
+    var playEl = e.target.closest('.iv_match_play');
+    if (playEl && isPlayIconVisible(playEl) && openBroadcastFromPlay(playEl)) {
+      return;
     }
 
     var railBtn = e.target.closest('.sport-rail-btn');

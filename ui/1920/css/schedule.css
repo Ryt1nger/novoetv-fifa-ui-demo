@@ -152,11 +152,14 @@
   height: var(--schedule-play-icon-size);
   display: none;
   background: url('../../assets/img/icons/ic_sport_play.svg') center / contain no-repeat;
-  z-index: 1;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.match_card_root.focused .iv_match_play {
+.iv_match_play.visible {
   display: block;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .match_main_content {

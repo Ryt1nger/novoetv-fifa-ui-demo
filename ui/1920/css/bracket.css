@@ -130,6 +130,7 @@
   width: var(--bracket-play-icon-size);
   height: var(--bracket-play-icon-size);
   display: none;
+  color: var(--sport-match-play-color);
   background: currentColor;
   -webkit-mask-image: url('../../assets/img/icons/ic_sport_play.svg');
   mask-image: url('../../assets/img/icons/ic_sport_play.svg');
@@ -139,10 +140,14 @@
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .bracket_cell .iv_match_play.visible {
   display: block;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .bracket_teams {

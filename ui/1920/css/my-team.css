@@ -213,6 +213,7 @@
   width: 50px;
   height: 50px;
   display: none;
+  color: var(--sport-match-play-color);
   background: currentColor;
   -webkit-mask-image: url('../../assets/img/icons/ic_sport_play.svg');
   mask-image: url('../../assets/img/icons/ic_sport_play.svg');
@@ -220,10 +221,14 @@
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .my_team_match .iv_match_play.visible {
   display: block;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .my_team_match_teams {

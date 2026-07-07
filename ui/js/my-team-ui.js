@@ -127,6 +127,8 @@
     var homeScore = score ? String(score.home) : '';
     var awayScore = score ? String(score.away) : '';
     var classes = ['match_card_root', 'my_team_match', match.availability || 'available'];
+    var playable = !!(match.channelIds && match.channelIds.length && (match.isLive || score));
+    if (playable) classes.push('playable');
     if (match.matchId === state.selectedMatchId) classes.push('selected');
     if (match.matchId === state.focusedMatchId) classes.push('focused');
     var showPlay = match.matchId === state.focusedMatchId &&
@@ -331,6 +333,7 @@
     toggleCountrySelection: toggleCountrySelection,
     setFocusedMatch: setFocusedMatch,
     setSelectedMatch: setSelectedMatch,
+    openBroadcastForMatch: openBroadcastForMatch,
     applyAuditState: applyAuditState,
     getFirstMatchId: getFirstMatchId,
     getState: getState

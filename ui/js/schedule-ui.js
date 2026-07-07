@@ -37,6 +37,17 @@
     return state.demoAvailability[match.matchId] || match.availability;
   }
 
+  function isPlayable(match) {
+    if (!match) return false;
+    return !!(match.channelIds && match.channelIds.length && (match.isLive || match.score));
+  }
+
+  function syncPlayOverlay(cardEl, match, focused) {
+    var play = cardEl.querySelector('.iv_match_play');
+    var showPlay = focused && isPlayable(match);
+    if (play) play.classList.toggle('visible', showPlay);
+  }
+
   function flagImg(url, cls) {
     if (url) {
       return '<img class="' + cls + '" src="' + escapeHtml(url) + '" alt="" loading="lazy" />';
@@ -57,8 +68,10 @@
     }
 
     var classes = ['match_card_root', effectiveAvailability(match)];
+    if (isPlayable(match)) classes.push('playable');
     if (match.matchId === state.selectedMatchId) classes.push('selected');
     if (match.matchId === state.focusedMatchId) classes.push('focused');
+    var showPlay = match.matchId === state.focusedMatchId && isPlayable(match);
 
     return (
       '<div class="' + classes.join(' ') + '" data-match-id="' + escapeHtml(match.matchId) + '" tabindex="0">' +
@@ -67,7 +80,7 @@
             '<span class="tv_group">' + escapeHtml(match.groupLabel) + '</span>' +
             '<span class="tv_time">' + escapeHtml(match.time) + '</span>' +
           '</div>' +
-          '<span class="iv_match_play" aria-hidden="true"></span>' +
+          '<span class="iv_match_play' + (showPlay ? ' visible' : '') + '" aria-hidden="true"></span>' +
         '</div>' +
         '<div class="match_main_content">' +
           '<span class="tv_team_home">' + escapeHtml(match.teamHome) + '</span>' +
@@ -163,9 +176,10 @@
   function setFocusedMatch(matchId) {
     state.focusedMatchId = matchId || null;
     document.querySelectorAll('#rv_sport_schedule .match_card_root').forEach(function (el) {
-      var on = state.focusedMatchId !== null &&
-        el.getAttribute('data-match-id') === state.focusedMatchId;
+      var id = el.getAttribute('data-match-id');
+      var on = state.focusedMatchId !== null && id === state.focusedMatchId;
       el.classList.toggle('focused', on);
+      syncPlayOverlay(el, findMatch(id), on);
     });
   }
 
