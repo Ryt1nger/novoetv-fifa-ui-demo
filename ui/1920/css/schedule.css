@@ -1,5 +1,3 @@
-@import '../css/tokens.css';
-
 /* FragmentSportSchedule — Stage 3 */
 
 #sport_schedule_root {
@@ -21,17 +19,17 @@
   display: none;
 }
 
-.schedule-section {
+#rv_sport_schedule .schedule-section {
   display: flex;
   align-items: flex-start;
   margin-bottom: var(--schedule-section-spacing);
 }
 
-.schedule-section:last-child {
+#rv_sport_schedule .schedule-section:last-child {
   margin-bottom: 0;
 }
 
-.date_block {
+#rv_sport_schedule .date_block {
   width: var(--schedule-dates-column-width);
   flex-shrink: 0;
   display: flex;
@@ -40,8 +38,8 @@
   padding-top: calc((var(--schedule-match-card-height) - var(--schedule-date-line-height) * 2) / 2);
 }
 
-#tv_date,
-.date_block .tv_date {
+#rv_sport_schedule .date_block .tv_date,
+#tv_date {
   font-size: var(--schedule-date-text-size);
   font-weight: 400;
   line-height: var(--schedule-date-line-height);
@@ -49,15 +47,15 @@
   font-feature-settings: 'tnum';
 }
 
-#tv_day_of_week,
-.date_block .tv_day_of_week {
+#rv_sport_schedule .date_block .tv_day_of_week,
+#tv_day_of_week {
   font-size: var(--schedule-date-text-size);
   font-weight: 400;
   line-height: var(--schedule-date-line-height);
   color: var(--schedule-date-text);
 }
 
-.rv_section_matches {
+#rv_sport_schedule .rv_section_matches {
   flex: 1;
   min-width: 0;
   margin-left: var(--schedule-dates-to-main-gap);
@@ -67,8 +65,8 @@
   row-gap: var(--schedule-grid-gap-v);
 }
 
-/* —— Match card —— */
-.match_card_root {
+/* —— Match card (scoped — не утекает в my-team / bracket) —— */
+#rv_sport_schedule .match_card_root {
   height: var(--schedule-match-card-height);
   border-radius: var(--schedule-match-card-radius);
   border: var(--schedule-match-card-border) solid var(--schedule-match-card-border-color);
@@ -82,32 +80,32 @@
   box-sizing: border-box;
 }
 
-.match_card_root.future {
+#rv_sport_schedule .match_card_root.future {
   background: var(--schedule-match-bg-future);
   color: var(--schedule-match-text-future);
 }
 
-.match_card_root.live {
+#rv_sport_schedule .match_card_root.live {
   background: var(--schedule-match-bg-live);
   color: var(--schedule-match-text-live);
 }
 
-.match_card_root.selected {
+#rv_sport_schedule .match_card_root.selected {
   background: var(--schedule-match-bg-selected);
   color: var(--schedule-match-text-selected);
   border-color: transparent;
 }
 
-.match_card_root.focused {
+#rv_sport_schedule .match_card_root.focused {
   outline: var(--schedule-match-focus-border) solid var(--schedule-match-focus-color);
   outline-offset: 0;
 }
 
-.match_card_root.selected .tv_group {
+#rv_sport_schedule .match_card_root.selected .tv_group {
   color: var(--schedule-match-meta-selected);
 }
 
-.meta_play_slot {
+#rv_sport_schedule .meta_play_slot {
   min-width: var(--schedule-play-icon-size);
   min-height: var(--schedule-play-icon-size);
   position: relative;
@@ -117,13 +115,13 @@
   justify-content: center;
 }
 
-.meta_play_slot .meta_text_col {
+#rv_sport_schedule .meta_play_slot .meta_text_col {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.tv_group {
+#rv_sport_schedule .tv_group {
   font-size: var(--schedule-match-group-size);
   font-weight: 400;
   line-height: 1;
@@ -135,7 +133,7 @@
   text-overflow: ellipsis;
 }
 
-.tv_time {
+#rv_sport_schedule .tv_time {
   font-size: var(--schedule-match-time-size);
   font-weight: 400;
   line-height: 1;
@@ -143,7 +141,7 @@
   white-space: nowrap;
 }
 
-.iv_match_play {
+#rv_sport_schedule .iv_match_play {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -156,7 +154,7 @@
   pointer-events: none;
 }
 
-.iv_match_play.visible {
+#rv_sport_schedule .iv_match_play.visible {
   display: block;
 }
 
@@ -165,7 +163,7 @@
   cursor: pointer;
 }
 
-.match_main_content {
+#rv_sport_schedule .match_main_content {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -173,8 +171,8 @@
   margin-left: var(--schedule-match-inner-gap);
 }
 
-.tv_team_home,
-.tv_team_away {
+#rv_sport_schedule .tv_team_home,
+#rv_sport_schedule .tv_team_away {
   flex: 1;
   min-width: 0;
   font-size: var(--schedule-match-team-size);
@@ -185,16 +183,16 @@
   text-overflow: ellipsis;
 }
 
-.tv_team_home {
+#rv_sport_schedule .tv_team_home {
   text-align: right;
 }
 
-.tv_team_away {
+#rv_sport_schedule .tv_team_away {
   text-align: left;
   margin-left: var(--schedule-match-flag-margin);
 }
 
-.flag_slot {
+#rv_sport_schedule .flag_slot {
   width: var(--schedule-match-flag-width);
   height: var(--schedule-match-flag-height);
   padding: var(--schedule-match-flag-pad-v) var(--schedule-match-flag-pad-h);
@@ -202,33 +200,33 @@
   box-sizing: content-box;
 }
 
-.iv_flag_home,
-.iv_flag_away,
-.flag_placeholder {
+#rv_sport_schedule .iv_flag_home,
+#rv_sport_schedule .iv_flag_away,
+#rv_sport_schedule .flag_placeholder {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
 }
 
-.flag_placeholder {
+#rv_sport_schedule .flag_placeholder {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 2px;
 }
 
-.score_container {
+#rv_sport_schedule .score_container {
   display: none;
   align-items: center;
   flex-shrink: 0;
   margin: 0 var(--schedule-match-flag-margin);
 }
 
-.score_container.visible {
+#rv_sport_schedule .score_container.visible {
   display: flex;
 }
 
-.tv_score_home,
-.tv_score_away {
+#rv_sport_schedule .tv_score_home,
+#rv_sport_schedule .tv_score_away {
   min-width: var(--schedule-score-box-min-width);
   height: var(--schedule-score-box-height);
   padding: 0 var(--schedule-score-box-pad-h);
@@ -241,7 +239,7 @@
   border-radius: var(--schedule-score-box-radius);
 }
 
-.tv_score_colon {
+#rv_sport_schedule .tv_score_colon {
   margin: 0 var(--schedule-score-colon-margin);
   font-size: var(--schedule-score-text-size);
   font-weight: 400;

@@ -6,8 +6,10 @@
 
   function localFlagUrl(teamId) {
     if (!teamId || teamId <= 0) return null;
-    if (global.FifaAssets && FifaAssets.flag) return FifaAssets.flag(teamId);
-    return '../../assets/img/flags/' + teamId + '.png';
+    var path;
+    if (global.FifaAssets && FifaAssets.flag) path = FifaAssets.flag(teamId);
+    else path = '../../assets/img/flags/' + teamId + '.png';
+    return global.FifaAssets && FifaAssets.absolute ? FifaAssets.absolute(path) : path;
   }
 
   function teamIdFromUrl(url) {

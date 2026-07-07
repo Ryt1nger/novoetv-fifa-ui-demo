@@ -22,7 +22,8 @@
   };
 
   function iconPath(file) {
-    return global.FifaAssets ? FifaAssets.icon(file) : '../../assets/img/icons/' + file;
+    var path = global.FifaAssets ? FifaAssets.icon(file) : '../../assets/img/icons/' + file;
+    return global.FifaAssets && FifaAssets.absolute ? FifaAssets.absolute(path) : path;
   }
 
   var ICONS = {

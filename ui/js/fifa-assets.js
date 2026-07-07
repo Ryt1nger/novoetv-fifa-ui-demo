@@ -14,6 +14,13 @@
     return base + '/' + clean;
   }
 
+  function toAbsolute(path) {
+    if (!path) return path;
+    if (/^https?:\/\//i.test(path)) return path;
+    if (path.charAt(0) === '/') return location.origin + path;
+    return new URL(path, location.href).href;
+  }
+
   function asset(relPath) {
     return join(repoBase(), 'assets/' + relPath.replace(/^\//, ''));
   }
@@ -30,11 +37,26 @@
     return asset('img/icons/' + name);
   }
 
+  function init() {
+    var base = repoBase();
+    document.documentElement.style.setProperty('--fifa-repo-base', base || '');
+  }
+
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  }
+
   global.FifaAssets = {
     repoBase: repoBase,
     asset: asset,
     mock: mock,
     flag: flag,
-    icon: icon
+    icon: icon,
+    absolute: toAbsolute,
+    init: init
   };
 })(typeof window !== 'undefined' ? window : global);
