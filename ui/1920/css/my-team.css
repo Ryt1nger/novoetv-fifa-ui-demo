@@ -227,6 +227,9 @@
 
 .my_team_match .iv_match_play.visible {
   display: block;
+}
+
+.my_team_match.playable .iv_match_play.visible {
   pointer-events: auto;
   cursor: pointer;
 }

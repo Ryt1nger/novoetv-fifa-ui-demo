@@ -158,6 +158,9 @@
 
 .iv_match_play.visible {
   display: block;
+}
+
+#rv_sport_schedule .playable .iv_match_play.visible {
   pointer-events: auto;
   cursor: pointer;
 }

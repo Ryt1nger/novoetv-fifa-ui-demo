@@ -146,6 +146,9 @@
 
 .bracket_cell .iv_match_play.visible {
   display: block;
+}
+
+.bracket_cell.playable .iv_match_play.visible {
   pointer-events: auto;
   cursor: pointer;
 }

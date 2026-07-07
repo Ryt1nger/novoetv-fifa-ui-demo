@@ -131,8 +131,7 @@
     if (playable) classes.push('playable');
     if (match.matchId === state.selectedMatchId) classes.push('selected');
     if (match.matchId === state.focusedMatchId) classes.push('focused');
-    var showPlay = match.matchId === state.focusedMatchId &&
-      match.channelIds && match.channelIds.length && (match.isLive || score);
+    var showPlay = match.matchId === state.focusedMatchId;
 
     return (
       '<div class="' + classes.join(' ') + '" data-match-id="' + escapeHtml(match.matchId) + '" tabindex="0">' +
@@ -281,12 +280,9 @@
         el.getAttribute('data-match-id') === state.focusedMatchId;
       el.classList.toggle('focused', on);
       var play = el.querySelector('.iv_match_play');
-      var match = findMatch(el.getAttribute('data-match-id'));
-      var showPlay = on && match && match.channelIds && match.channelIds.length &&
-        (match.isLive || match.score);
-      if (play) play.classList.toggle('visible', !!showPlay);
+      if (play) play.classList.toggle('visible', on);
       var time = el.querySelector('.tv_time');
-      if (time) time.classList.toggle('hidden-for-play', !!showPlay);
+      if (time) time.classList.toggle('hidden-for-play', on);
     });
   }
 

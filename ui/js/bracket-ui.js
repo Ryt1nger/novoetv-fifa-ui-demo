@@ -47,7 +47,7 @@
     if (placement.id === state.focusedCellId) classes.push('focused');
     if (match.isPlayable) classes.push('playable');
 
-    var showPlay = match.isPlayable && placement.id === state.focusedCellId;
+    var showPlay = placement.id === state.focusedCellId;
 
     return (
       '<div class="' + classes.join(' ') + '" id="bracket_cell_' + escapeHtml(placement.id) + '"' +
@@ -137,8 +137,7 @@
       var isFocus = id === state.focusedCellId;
       el.classList.toggle('focused', isFocus);
       var play = el.querySelector('.iv_match_play');
-      var playable = el.classList.contains('playable');
-      if (play) play.classList.toggle('visible', isFocus && playable);
+      if (play) play.classList.toggle('visible', isFocus);
     });
   }
 

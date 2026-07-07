@@ -25,22 +25,31 @@
 
   function openBroadcastFromPlay(playEl) {
     var bracketCell = playEl.closest('#bracket_cells_container .bracket_cell');
-    if (bracketCell && global.BracketUI && BracketUI.openBroadcastForCell) {
-      applyShell({ activeTab: 'bracket', railFocus: null, tabFocus: null });
-      BracketUI.openBroadcastForCell(bracketCell.getAttribute('data-cell-id'));
-      return true;
+    if (bracketCell) {
+      if (!bracketCell.classList.contains('playable')) return false;
+      if (global.BracketUI && BracketUI.openBroadcastForCell) {
+        applyShell({ activeTab: 'bracket', railFocus: null, tabFocus: null });
+        BracketUI.openBroadcastForCell(bracketCell.getAttribute('data-cell-id'));
+        return true;
+      }
     }
     var schedCard = playEl.closest('#rv_sport_schedule .match_card_root');
-    if (schedCard && global.ScheduleUI && ScheduleUI.openBroadcastForMatch) {
-      applyShell({ activeTab: 'schedule', railFocus: null, tabFocus: null });
-      ScheduleUI.openBroadcastForMatch(schedCard.getAttribute('data-match-id'));
-      return true;
+    if (schedCard) {
+      if (!schedCard.classList.contains('playable')) return false;
+      if (global.ScheduleUI && ScheduleUI.openBroadcastForMatch) {
+        applyShell({ activeTab: 'schedule', railFocus: null, tabFocus: null });
+        ScheduleUI.openBroadcastForMatch(schedCard.getAttribute('data-match-id'));
+        return true;
+      }
     }
     var myCard = playEl.closest('#rv_my_team_schedule .match_card_root');
-    if (myCard && global.MyTeamUI && MyTeamUI.openBroadcastForMatch) {
-      applyShell({ activeTab: 'my_team', railFocus: null, tabFocus: null });
-      MyTeamUI.openBroadcastForMatch(myCard.getAttribute('data-match-id'));
-      return true;
+    if (myCard) {
+      if (!myCard.classList.contains('playable')) return false;
+      if (global.MyTeamUI && MyTeamUI.openBroadcastForMatch) {
+        applyShell({ activeTab: 'my_team', railFocus: null, tabFocus: null });
+        MyTeamUI.openBroadcastForMatch(myCard.getAttribute('data-match-id'));
+        return true;
+      }
     }
     return false;
   }
