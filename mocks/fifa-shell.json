@@ -1,0 +1,11 @@
+{
+  "sportShell": {
+    "title": "Чемпионат мира по футболу FIFA 2026",
+    "titleEn": "FIFA World Cup 2026",
+    "tabs": [
+      { "id": "tab_schedule", "label": "Расписание игр", "icon": "football", "railId": "btn_sport_rail_schedule" },
+      { "id": "tab_bracket", "label": "Турнирная сетка", "icon": "tournir_grid", "railId": "btn_sport_rail_bracket" },
+      { "id": "tab_my_team", "label": "Моя команда", "icon": "your_team_icon", "railId": "btn_sport_rail_my_team" }
+    ]
+  }
+}

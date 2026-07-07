@@ -1,0 +1,74 @@
+@import './tokens.css';
+
+/* DialogSportBroadcastSources — Stage 6 */
+
+#sport_sources_dialog_root {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  background: var(--broadcast-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#sport_sources_dialog_root.preview-hidden {
+  display: none !important;
+}
+
+#sport_sources_panel {
+  width: 440px;
+  border-radius: var(--broadcast-panel-radius);
+  padding: 16px;
+  background: #1B2A40;
+  cursor: default;
+}
+
+#sport_sources_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sport_source_item {
+  height: 72px;
+  border-radius: 8px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+.sport_source_item.focused {
+  background: var(--broadcast-item-focus-bg);
+}
+
+.sport_source_title {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sport_source_chevron {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  background: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='black' d='M4 2l4 4-4 4'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='black' d='M4 2l4 4-4 4'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}

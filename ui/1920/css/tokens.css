@@ -1,0 +1,126 @@
+/* dimens.xml @ 1920 (dp × 2) */
+:root {
+  --sport-bg: #010E21;
+  --sport-rail-bg: #0A1628;
+  --sport-rail-item-bg: rgba(255, 255, 255, 0.1);
+  --sport-rail-item-bg-focused: #86DBFF;
+  --sport-rail-item-bg-selected: #FFFFFF;
+  --sport-rail-icon-default: rgba(255, 255, 255, 0.5);
+  --sport-rail-icon-active: #1A2D42;
+
+  --sport-title-text: #FFFFFF;
+  --sport-tab-text: rgba(255, 255, 255, 0.53); /* #87FFFFFF */
+  --sport-tab-text-selected: #FFFFFF;
+  --sport-tab-indicator: #FFFFFF;
+  --sport-tab-track-inactive: rgba(255, 255, 255, 0.53); /* #87FFFFFF */
+
+  --sport-rail-width: 136px;
+  --sport-content-margin-end: 46px;
+  --sport-title-margin-top: 38px;
+  --sport-title-text-size: 40px;
+  --sport-tabs-margin-top: 20px;
+  --sport-tab-text-size: 22px;
+  --sport-tab-icon-size: 25px;
+  --sport-tab-item-padding-h: 16px;
+  --sport-tab-icon-padding-h: 10px;
+  --sport-tab-icon-text-gap: 4px;
+  --sport-tab-content-indicator-gap: 10px;
+  --sport-tab-spacing: 64px;
+  --sport-tab-indicator-height: 4px;
+  --sport-pager-margin-top: 22px;
+
+  --sport-rail-btn-width: 51px;
+  --sport-rail-btn-height: 43px;
+  --sport-rail-btn-radius: 10px;
+  --sport-rail-btn-pad-h: 14px;
+  --sport-rail-btn-pad-v: 10px;
+  --sport-rail-icon-size: 25px;
+  --sport-rail-back-gap: 33px;
+  --sport-rail-item-gap: 10px;
+  --sport-rail-offset-x: 10px;
+  --sport-rail-offset-y: 20px;
+
+  /* Schedule @ 1920 (SportScreenMetrics + dimens × 2) */
+  --schedule-padding-top: 25px;
+  --schedule-padding-right: 20px;
+  --schedule-padding-bottom: 112px;
+  --schedule-dates-column-width: 60px;
+  --schedule-dates-to-main-gap: 21px;
+  --schedule-date-text-size: 22px;
+  --schedule-date-line-height: 22px;
+  --schedule-date-text: #B3FFFFFF;
+  --schedule-section-spacing: 46px;
+  --schedule-grid-gap-h: 11px;
+  --schedule-grid-gap-v: 10px;
+  --schedule-match-card-height: 73px;
+  --schedule-match-card-radius: 12px;
+  --schedule-match-card-pad-v: 10px;
+  --schedule-match-card-pad-h: 8px;
+  --schedule-match-inner-gap: 12px;
+  --schedule-match-group-size: 16px;
+  --schedule-match-time-size: 24px;
+  --schedule-match-team-size: 22px;
+  --schedule-match-meta-gap: 0px;
+  --schedule-match-meta-text: rgba(255, 255, 255, 0.5);
+  --schedule-match-meta-selected: rgba(1, 14, 33, 0.5);
+  --schedule-match-flag-width: 32px;
+  --schedule-match-flag-height: 26px;
+  --schedule-match-flag-pad-v: 4px;
+  --schedule-match-flag-pad-h: 2px;
+  --schedule-match-flag-margin: 16px;
+  --schedule-match-card-border: 1px;
+  --schedule-match-card-border-color: rgba(255, 255, 255, 0.2);
+  --schedule-match-bg-available: #1A2D42;
+  --schedule-match-bg-future: #2A4057;
+  --schedule-match-bg-live: #BEE0C2;
+  --schedule-match-bg-selected: #FFFFFF;
+  --schedule-match-text-available: #FFFFFF;
+  --schedule-match-text-future: #A6FFFFFF;
+  --schedule-match-text-live: #1A2D42;
+  --schedule-match-text-selected: #010E21;
+  --schedule-match-focus-border: 4px;
+  --schedule-match-focus-color: #86DBFF;
+  --schedule-score-box-height: 24px;
+  --schedule-score-box-min-width: 24px;
+  --schedule-score-box-pad-h: 6px;
+  --schedule-score-box-radius: 4px;
+  --schedule-score-text-size: 16px;
+  --schedule-score-colon-margin: 4px;
+  --schedule-score-box-bg: #FFFFFF;
+  --schedule-score-digit-text: #010E21;
+  --schedule-play-icon-size: 48px;
+  --schedule-placeholder-text: #80FFFFFF;
+
+  /* Bracket @ 1920 */
+  --bracket-cell-width: 222px;
+  --bracket-cell-height: 90px;
+  --bracket-cell-radius: 12px;
+  --bracket-cell-pad-v: 12px;
+  --bracket-cell-pad-h: 16px;
+  --bracket-cell-inner-gap: 16px;
+  --bracket-meta-text-size: 18px;
+  --bracket-team-text-size: 18px;
+  --bracket-play-icon-size: 40px;
+  --bracket-focus-border: 4px;
+  --bracket-label-text-size: 24px;
+  --bracket-label-line-height: 24px;
+
+  /* My Team @ 1920 */
+  --my-team-panel-bg: rgba(255, 255, 255, 0.1);
+  --my-team-panel-radius: 16px;
+  --my-team-panel-pad-v: 20px;
+  --my-team-panel-edge: 26px;
+  --my-team-date-col-width: 119px;
+  --my-team-match-width: 491px;
+  --my-team-match-height: 88px;
+  --my-team-match-time-size: 24px;
+  --my-team-match-team-size: 22px;
+  --my-team-focus-border: 4px;
+
+  /* Broadcast @ 1920 */
+  --broadcast-panel-radius: 12px;
+  --broadcast-item-focus-bg: rgba(134, 219, 255, 0.2);
+  --broadcast-overlay: rgba(1, 14, 33, 0.8);
+
+  /* Menu @ 1920 */
+}

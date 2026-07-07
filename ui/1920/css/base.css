@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../assets/fonts/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../assets/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+* { box-sizing: border-box; }
+
+html.browser-preview,
+html.browser-preview body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--sport-title-text);
+  background: #000;
+  font-family: 'Inter', system-ui, sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+html.browser-preview #tv-viewport {
+  position: fixed;
+  inset: 0 0 var(--dev-panel-height, 32px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+html.browser-preview #tv-stage {
+  width: 1920px;
+  height: 1080px;
+  transform: scale(var(--preview-scale, 1));
+  transform-origin: center center;
+  flex-shrink: 0;
+  position: relative;
+  background: var(--sport-bg);
+  overflow: hidden;
+}
+
+#tv-stage {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  background: var(--sport-bg);
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+}
+
+img { pointer-events: none; }
+
+.preview-hidden { display: none !important; }
+
+html.audit-mode #dev-panel { display: none; }
+html.audit-mode.browser-preview #tv-viewport { bottom: 0; }
+
+#dev-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid #2a2a2a;
+  font: 10px/1.2 system-ui, sans-serif;
+  color: #aaa;
+}
+
+#dev-panel.collapsed {
+  cursor: pointer;
+}
+
+#dev-panel.collapsed .dev-bar,
+#dev-panel.collapsed .dev-more {
+  display: none;
+}
+
+#dev-panel.collapsed::before {
+  content: 'dev';
+  display: block;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#dev-panel.collapsed:hover::before {
+  color: #999;
+}
+
+.dev-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  min-height: 28px;
+}
+
+.dev-tabs {
+  display: flex;
+  gap: 2px;
+}
+
+.dev-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0 8px 5px;
+}
+
+#dev-panel button {
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 10px;
+  margin: 0;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #ccc;
+  border-radius: 3px;
+}
+
+#dev-panel button.dev-icon {
+  padding: 2px 5px;
+  min-width: 22px;
+}
+
+#dev-panel button.active {
+  background: #86DBFF;
+  color: #010E21;
+  border-color: #86DBFF;
+}
+
+#dev-panel select {
+  font-size: 10px;
+  padding: 1px 3px;
+  max-width: 88px;
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 3px;
+}
+
+#dev-status {
+  margin-left: auto;
+  color: #6a8a9a;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 42%;
+}
+
+html.browser-preview #tv-stage .sport-rail-btn,
+html.browser-preview #tv-stage .sport-tab,
+html.browser-preview #tv-stage .match_card_root,
+html.browser-preview #tv-stage .bracket_cell,
+html.browser-preview #tv-stage .country_chip_root,
+html.browser-preview #tv-stage .sport_source_item,
+html.browser-preview #tv-stage #btn_schedule_scroll_top,
+html.browser-preview #tv-stage #btn_schedule_retry {
+  cursor: pointer;
+}

@@ -1,0 +1,47 @@
+{
+  "demo": true,
+  "matches": {
+    "537345": {
+      "id": 537345,
+      "stage": "GROUP_STAGE",
+      "stage_ru": "Групповой этап",
+      "group": "GROUP_D",
+      "group_ru": "Группа D",
+      "date": "2026-06-13",
+      "time": "01:00",
+      "timestamp": 1781312400,
+      "team1_code": "USA",
+      "team2_code": "PAR",
+      "team1_name": "United States",
+      "team2_name": "Paraguay",
+      "team1_name_ru": "США",
+      "team2_name_ru": "Парагвай",
+      "team1_id": 771,
+      "team2_id": 761,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "channels": ["1013", "5", "103"]
+    },
+    "537347": {
+      "id": 537347,
+      "stage": "GROUP_STAGE",
+      "stage_ru": "Групповой этап",
+      "group": "GROUP_A",
+      "group_ru": "Группа A",
+      "date": "2026-06-12",
+      "time": "22:00",
+      "timestamp": 1781301600,
+      "team1_name_ru": "Мексика",
+      "team2_name_ru": "Бразилия",
+      "score": {
+        "team1": 2,
+        "team2": 1
+      },
+      "status": "FINISHED",
+      "channels": ["103"]
+    }
+  }
+}

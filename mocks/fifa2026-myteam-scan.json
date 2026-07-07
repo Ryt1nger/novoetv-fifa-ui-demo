@@ -1,0 +1,60 @@
+{
+  "matches": {
+    "MT1101": {
+      "id": "MT1101",
+      "stage": "GROUP_STAGE",
+      "group_ru": "Группа A",
+      "date": "2026-06-11",
+      "time": "22:00",
+      "team1_name_ru": "Мексика",
+      "team2_name_ru": "ЮАР",
+      "team1_id": 16,
+      "team2_id": 1530,
+      "score": { "team1": 2, "team2": 0 },
+      "status": "FINISHED",
+      "channels": ["103"]
+    },
+    "MT1102": {
+      "id": "MT1102",
+      "stage": "GROUP_STAGE",
+      "group_ru": "Группа B",
+      "date": "2026-06-11",
+      "time": "22:00",
+      "team1_name_ru": "Южная Корея",
+      "team2_name": "Czechia",
+      "team1_id": 17,
+      "team2_id": 770,
+      "score": { "team1": 2, "team2": 1 },
+      "status": "FINISHED",
+      "channels": ["103"]
+    },
+    "MT1201": {
+      "id": "MT1201",
+      "stage": "GROUP_STAGE",
+      "group_ru": "Группа F",
+      "date": "2026-06-12",
+      "time": "05:00",
+      "team1_name_ru": "Бельгия",
+      "team2_name_ru": "Египет",
+      "team1_id": 1,
+      "team2_id": 32,
+      "score": { "team1": 3, "team2": 0 },
+      "status": "FINISHED",
+      "channels": ["103", "1013"]
+    },
+    "MT1301": {
+      "id": "MT1301",
+      "stage": "GROUP_STAGE",
+      "group_ru": "Группа F",
+      "date": "2026-06-13",
+      "time": "05:00",
+      "team1_name_ru": "Бельгия",
+      "team2_name_ru": "Иран",
+      "team1_id": 1,
+      "team2_id": 22,
+      "score": { "team1": 2, "team2": 1 },
+      "status": "FINISHED",
+      "channels": ["103"]
+    }
+  }
+}

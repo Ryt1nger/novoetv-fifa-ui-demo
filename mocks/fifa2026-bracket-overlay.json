@@ -1,0 +1,335 @@
+{
+  "matches": {
+    "PLAYOFF_1": {
+      "team1_name_ru": "ЮАР",
+      "team2_name_ru": "Канада",
+      "team1_id": 1530,
+      "team2_id": 5529,
+      "date": "2026-06-28",
+      "time": "22:00",
+      "score": { "team1": 0, "team2": 1 },
+      "status": "FINISHED",
+      "channels": ["103", "1013"]
+    },
+    "PLAYOFF_2": {
+      "team1_name_ru": "Бельгия",
+      "team2_name_ru": "Сенегал",
+      "team1_id": 1,
+      "team2_id": 13,
+      "date": "2026-06-29",
+      "time": "19:00",
+      "score": { "team1": 3, "team2": 2 },
+      "status": "FINISHED",
+      "channels": ["103"]
+    },
+    "PLAYOFF_3": {
+      "team1_name_ru": "Нидерланды",
+      "team2_name_ru": "Марокко",
+      "team1_id": 1118,
+      "team2_id": 31,
+      "date": "2026-06-30",
+      "time": "04:00",
+      "score": { "team1": 0, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_4": {
+      "team1_name_ru": "Мексика",
+      "team2_name_ru": "Эквадор",
+      "team1_id": 16,
+      "team2_id": 238,
+      "date": "2026-07-01",
+      "time": "04:00",
+      "score": { "team1": 2, "team2": 0 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_5": {
+      "team1_name_ru": "Германия",
+      "team2_name_ru": "Парагвай",
+      "team1_id": 25,
+      "team2_id": 761,
+      "date": "2026-06-29",
+      "time": "23:30",
+      "score": { "team1": 1, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_6": {
+      "team1_name_ru": "Кот-д'Ивуар",
+      "team2_name_ru": "Норвегия",
+      "team1_id": 28,
+      "team2_id": 5,
+      "date": "2026-06-30",
+      "time": "20:00",
+      "score": { "team1": 0, "team2": 2 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_7": {
+      "team1_name_ru": "Франция",
+      "team2_name_ru": "Швеция",
+      "team1_id": 2,
+      "team2_id": 47,
+      "date": "2026-07-01",
+      "time": "00:00",
+      "score": { "team1": 3, "team2": 0 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_8": {
+      "team1_name_ru": "Эквадор",
+      "team2_name_ru": "Англия",
+      "team1_id": 238,
+      "team2_id": 10,
+      "date": "2026-06-29",
+      "time": "04:00",
+      "score": { "team1": 1, "team2": 3 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_9": {
+      "team1_name_ru": "Бразилия",
+      "team2_name_ru": "Япония",
+      "team1_id": 6,
+      "team2_id": 12,
+      "date": "2026-06-29",
+      "time": "20:00",
+      "score": { "team1": 2, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_10": {
+      "team1_name_ru": "Англия",
+      "team2_name_ru": "ДР Конго",
+      "team1_id": 10,
+      "team2_id": 1504,
+      "date": "2026-07-01",
+      "time": "19:00",
+      "score": { "team1": 2, "team2": 1 },
+      "status": "FINISHED",
+      "channels": ["103"]
+    },
+    "PLAYOFF_11": {
+      "team1_name_ru": "США",
+      "team2_name_ru": "Босния и Герцеговина",
+      "team1_id": 771,
+      "team2_id": 1113,
+      "date": "2026-07-02",
+      "time": "03:00",
+      "score": { "team1": 2, "team2": 0 },
+      "status": "FINISHED",
+      "channels": ["103", "1013"]
+    },
+    "PLAYOFF_12": {
+      "team1_name_ru": "Испания",
+      "team2_name_ru": "Австрия",
+      "team1_id": 9,
+      "team2_id": 775,
+      "date": "2026-07-02",
+      "time": "22:00",
+      "score": { "team1": 3, "team2": 0 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_13": {
+      "team1_name_ru": "Португалия",
+      "team2_name_ru": "Хорватия",
+      "team1_id": 27,
+      "team2_id": 3,
+      "date": "2026-07-03",
+      "time": "02:00",
+      "score": { "team1": 2, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_14": {
+      "team1_name_ru": "Швейцария",
+      "team2_name_ru": "Алжир",
+      "team1_id": 15,
+      "team2_id": 4,
+      "date": "2026-07-03",
+      "time": "06:00",
+      "score": { "team1": 2, "team2": 0 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_15": {
+      "team1_name_ru": "Австралия",
+      "team2_name_ru": "Египет",
+      "team1_id": 20,
+      "team2_id": 32,
+      "date": "2026-07-03",
+      "time": "21:00",
+      "score": { "team1": 1, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_16": {
+      "team1_name_ru": "Аргентина",
+      "team2_name_ru": "Кабо-Верде",
+      "team1_id": 26,
+      "team2_id": 553,
+      "date": "2026-07-04",
+      "time": "01:00",
+      "score": { "team1": 3, "team2": 2 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_17": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Колумбия",
+      "team2_name_ru": "Гана",
+      "team1_id": 23,
+      "team2_id": 11,
+      "date": "2026-07-04",
+      "time": "04:30",
+      "score": { "team1": 1, "team2": 0 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_18": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Канада",
+      "team2_name_ru": "Марокко",
+      "team1_id": 5529,
+      "team2_id": 31,
+      "date": "2026-07-04",
+      "time": "20:00",
+      "score": { "team1": 0, "team2": 3 },
+      "status": "FINISHED",
+      "channels": ["103", "1013", "5"]
+    },
+    "PLAYOFF_19": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Парагвай",
+      "team2_name_ru": "Франция",
+      "team1_id": 761,
+      "team2_id": 2,
+      "date": "2026-07-05",
+      "time": "00:00",
+      "score": { "team1": 0, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_20": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Бразилия",
+      "team2_name_ru": "Норвегия",
+      "team1_id": 6,
+      "team2_id": 5,
+      "date": "2026-07-05",
+      "time": "23:00",
+      "score": { "team1": 1, "team2": 2 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_21": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "США",
+      "team2_name_ru": "Испания",
+      "team1_id": 771,
+      "team2_id": 9,
+      "date": "2026-07-06",
+      "time": "04:00",
+      "score": { "team1": 1, "team2": 4 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_22": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Мексика",
+      "team2_name_ru": "Англия",
+      "team1_id": 16,
+      "team2_id": 10,
+      "date": "2026-07-06",
+      "time": "22:00",
+      "score": { "team1": 2, "team2": 3 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_23": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Швейцария",
+      "team2_name_ru": "Аргентина",
+      "team1_id": 15,
+      "team2_id": 26,
+      "date": "2026-07-07",
+      "time": "03:00",
+      "score": { "team1": 0, "team2": 4 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_24": {
+      "stage_ru": "1/8 финала",
+      "team1_name_ru": "Бельгия",
+      "team2_name_ru": "Колумбия",
+      "team1_id": 1,
+      "team2_id": 23,
+      "date": "2026-07-07",
+      "time": "23:00",
+      "score": { "team1": 4, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_25": {
+      "stage_ru": "1/4 финала",
+      "team1_name_ru": "Канада",
+      "team2_name_ru": "Марокко",
+      "team1_id": 5529,
+      "team2_id": 31,
+      "date": "2026-07-04",
+      "time": "20:00",
+      "score": { "team1": 0, "team2": 3 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_26": {
+      "stage_ru": "1/4 финала",
+      "team1_name_ru": "Бразилия",
+      "team2_name_ru": "Норвегия",
+      "team1_id": 6,
+      "team2_id": 5,
+      "date": "2026-07-05",
+      "time": "23:00",
+      "score": { "team1": 1, "team2": 2 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_27": {
+      "stage_ru": "1/4 финала",
+      "team1_name_ru": "Португалия",
+      "team2_name_ru": "Испания",
+      "team1_id": 27,
+      "team2_id": 9,
+      "date": "2026-07-06",
+      "time": "22:00",
+      "score": { "team1": 0, "team2": 1 },
+      "status": "FINISHED"
+    },
+    "PLAYOFF_28": {
+      "stage_ru": "1/4 финала",
+      "team1_name_ru": "Аргентина",
+      "team2_name_ru": "Египет",
+      "team1_id": 26,
+      "team2_id": 32,
+      "date": "2026-07-07",
+      "time": "19:00",
+      "score": { "team1": null, "team2": null },
+      "status": "TIMED"
+    },
+    "PLAYOFF_29": {
+      "stage_ru": "Полуфинал",
+      "team1_name_ru": "Франция",
+      "team2_name_ru": "Марокко",
+      "team1_id": 2,
+      "team2_id": 31,
+      "date": "2026-07-09",
+      "time": "23:00",
+      "score": { "team1": null, "team2": null },
+      "status": "TIMED"
+    },
+    "PLAYOFF_30": {
+      "stage_ru": "Полуфинал",
+      "team1_name_ru": "Норвегия",
+      "team2_name_ru": "Англия",
+      "team1_id": 5,
+      "team2_id": 10,
+      "date": "2026-07-12",
+      "time": "00:00",
+      "score": { "team1": null, "team2": null },
+      "status": "TIMED"
+    },
+    "PLAYOFF_31": {
+      "stage_ru": "Матч за 3е место",
+      "date": "2026-07-18",
+      "time": "17:00",
+      "status": "TIMED"
+    },
+    "PLAYOFF_32": {
+      "stage_ru": "Финал",
+      "date": "2026-07-19",
+      "time": "15:00",
+      "status": "TIMED"
+    }
+  }
+}

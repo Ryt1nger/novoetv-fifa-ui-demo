@@ -1,0 +1,1183 @@
+{
+  "demo": true,
+  "tournament": "FIFA World Cup 2026",
+  "teams": {},
+  "matches": {
+    "537345": {
+      "id": 537345,
+      "stage": "GROUP_STAGE",
+      "stage_ru": "Групповой этап",
+      "group": "GROUP_D",
+      "group_ru": "Группа D",
+      "date": "2026-06-13",
+      "time": "01:00",
+      "timestamp": 1781312400,
+      "team1_code": "USA",
+      "team2_code": "PAR",
+      "team1_name": "United States",
+      "team2_name": "Paraguay",
+      "team1_name_ru": "США",
+      "team2_name_ru": "Парагвай",
+      "team1_id": 771,
+      "team2_id": 761,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "channels": [
+        "1013",
+        "5",
+        "103"
+      ]
+    },
+    "537347": {
+      "id": 537347,
+      "stage": "GROUP_STAGE",
+      "stage_ru": "Групповой этап",
+      "group": "GROUP_A",
+      "group_ru": "Группа A",
+      "date": "2026-06-12",
+      "time": "22:00",
+      "timestamp": 1781301600,
+      "team1_id": 16,
+      "team2_id": 10,
+      "team1_name_ru": "Мексика",
+      "team2_name_ru": "Бразилия",
+      "score": {
+        "team1": 2,
+        "team2": 1
+      },
+      "status": "FINISHED",
+      "channels": [
+        "103"
+      ]
+    },
+    "PLAYOFF_1": {
+      "id": "PLAYOFF_1",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-28",
+      "time": "22:00",
+      "timestamp": null,
+      "team1_code": "RSA",
+      "team2_code": "CAN",
+      "team1_name": "South Africa",
+      "team2_name": "Canada",
+      "team1_name_ru": "ЮАР",
+      "team2_name_ru": "Канада",
+      "team1_id": 1530,
+      "team2_id": 5529,
+      "score": {
+        "team1": 0,
+        "team2": 1
+      },
+      "status": "FINISHED",
+      "match_minute": null,
+      "venue": "Los Angeles (Inglewood)",
+      "channels": [
+        "103",
+        "1013"
+      ],
+      "team1_source": {
+        "position": 2,
+        "group": "A"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "B"
+      },
+      "table_order": 1
+    },
+    "PLAYOFF_2": {
+      "id": "PLAYOFF_2",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-29",
+      "time": "16:30",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Boston (Foxborough)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "E"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "A/B/C/D/F"
+      },
+      "table_order": 2
+    },
+    "PLAYOFF_3": {
+      "id": "PLAYOFF_3",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-29",
+      "time": "19:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Monterrey (Guadalupe)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "F"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "C"
+      },
+      "table_order": 3
+    },
+    "PLAYOFF_4": {
+      "id": "PLAYOFF_4",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-29",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Houston",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "C"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "F"
+      },
+      "table_order": 4
+    },
+    "PLAYOFF_5": {
+      "id": "PLAYOFF_5",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-30",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "New York/New Jersey (East Rutherford)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "I"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "C/D/F/G/H"
+      },
+      "table_order": 5
+    },
+    "PLAYOFF_6": {
+      "id": "PLAYOFF_6",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-30",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Dallas (Arlington)",
+      "channels": [],
+      "team1_source": {
+        "position": 2,
+        "group": "E"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "I"
+      },
+      "table_order": 6
+    },
+    "PLAYOFF_7": {
+      "id": "PLAYOFF_7",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-06-30",
+      "time": "19:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Mexico City",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "A"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "C/E/F/H/I"
+      },
+      "table_order": 7
+    },
+    "PLAYOFF_8": {
+      "id": "PLAYOFF_8",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-01",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Atlanta",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "L"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "E/H/I/J/K"
+      },
+      "table_order": 8
+    },
+    "PLAYOFF_9": {
+      "id": "PLAYOFF_9",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-01",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "San Francisco Bay Area (Santa Clara)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "D"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "B/E/F/I/J"
+      },
+      "table_order": 9
+    },
+    "PLAYOFF_10": {
+      "id": "PLAYOFF_10",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-01",
+      "time": "13:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Seattle",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "G"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "A/E/H/I/J"
+      },
+      "table_order": 10
+    },
+    "PLAYOFF_11": {
+      "id": "PLAYOFF_11",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-02",
+      "time": "19:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Toronto",
+      "channels": [],
+      "team1_source": {
+        "position": 2,
+        "group": "K"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "L"
+      },
+      "table_order": 11
+    },
+    "PLAYOFF_12": {
+      "id": "PLAYOFF_12",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-02",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Los Angeles (Inglewood)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "H"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "J"
+      },
+      "table_order": 12
+    },
+    "PLAYOFF_13": {
+      "id": "PLAYOFF_13",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-02",
+      "time": "20:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Vancouver",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "B"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "E/F/G/I/J"
+      },
+      "table_order": 13
+    },
+    "PLAYOFF_14": {
+      "id": "PLAYOFF_14",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-03",
+      "time": "18:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Miami (Miami Gardens)",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "J"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "H"
+      },
+      "table_order": 14
+    },
+    "PLAYOFF_15": {
+      "id": "PLAYOFF_15",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-03",
+      "time": "20:30",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Kansas City",
+      "channels": [],
+      "team1_source": {
+        "position": 1,
+        "group": "K"
+      },
+      "team2_source": {
+        "position": 3,
+        "group": "D/E/I/J/L"
+      },
+      "table_order": 15
+    },
+    "PLAYOFF_16": {
+      "id": "PLAYOFF_16",
+      "stage": "LAST_32",
+      "stage_ru": "1/16 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-03",
+      "time": "13:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Dallas (Arlington)",
+      "channels": [],
+      "team1_source": {
+        "position": 2,
+        "group": "D"
+      },
+      "team2_source": {
+        "position": 2,
+        "group": "G"
+      },
+      "table_order": 16
+    },
+    "PLAYOFF_17": {
+      "id": "PLAYOFF_17",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-04",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Philadelphia",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_2",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_5",
+        "role": "winner"
+      },
+      "table_order": 17
+    },
+    "PLAYOFF_18": {
+      "id": "PLAYOFF_18",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-04",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Houston",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_1",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_3",
+        "role": "winner"
+      },
+      "table_order": 18
+    },
+    "PLAYOFF_19": {
+      "id": "PLAYOFF_19",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-05",
+      "time": "16:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "New York/New Jersey (East Rutherford)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_4",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_6",
+        "role": "winner"
+      },
+      "table_order": 19
+    },
+    "PLAYOFF_20": {
+      "id": "PLAYOFF_20",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-05",
+      "time": "18:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Mexico City",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_7",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_8",
+        "role": "winner"
+      },
+      "table_order": 20
+    },
+    "PLAYOFF_21": {
+      "id": "PLAYOFF_21",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-06",
+      "time": "14:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Dallas (Arlington)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_11",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_12",
+        "role": "winner"
+      },
+      "table_order": 21
+    },
+    "PLAYOFF_22": {
+      "id": "PLAYOFF_22",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-06",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Seattle",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_9",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_10",
+        "role": "winner"
+      },
+      "table_order": 22
+    },
+    "PLAYOFF_23": {
+      "id": "PLAYOFF_23",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-07",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Atlanta",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_14",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_16",
+        "role": "winner"
+      },
+      "table_order": 23
+    },
+    "PLAYOFF_24": {
+      "id": "PLAYOFF_24",
+      "stage": "LAST_16",
+      "stage_ru": "1/8 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-07",
+      "time": "13:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Vancouver",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_13",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_15",
+        "role": "winner"
+      },
+      "table_order": 24
+    },
+    "PLAYOFF_25": {
+      "id": "PLAYOFF_25",
+      "stage": "QUARTER_FINALS",
+      "stage_ru": "1/4 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-09",
+      "time": "16:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Boston (Foxborough)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_17",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_18",
+        "role": "winner"
+      },
+      "table_order": 25
+    },
+    "PLAYOFF_26": {
+      "id": "PLAYOFF_26",
+      "stage": "QUARTER_FINALS",
+      "stage_ru": "1/4 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-10",
+      "time": "12:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Los Angeles (Inglewood)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_21",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_22",
+        "role": "winner"
+      },
+      "table_order": 26
+    },
+    "PLAYOFF_27": {
+      "id": "PLAYOFF_27",
+      "stage": "QUARTER_FINALS",
+      "stage_ru": "1/4 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-11",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Miami (Miami Gardens)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_19",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_20",
+        "role": "winner"
+      },
+      "table_order": 27
+    },
+    "PLAYOFF_28": {
+      "id": "PLAYOFF_28",
+      "stage": "QUARTER_FINALS",
+      "stage_ru": "1/4 финала",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-11",
+      "time": "20:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Kansas City",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_23",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_24",
+        "role": "winner"
+      },
+      "table_order": 28
+    },
+    "PLAYOFF_29": {
+      "id": "PLAYOFF_29",
+      "stage": "SEMI_FINALS",
+      "stage_ru": "Полуфинал",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-14",
+      "time": "14:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Dallas (Arlington)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_25",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_26",
+        "role": "winner"
+      },
+      "table_order": 29
+    },
+    "PLAYOFF_30": {
+      "id": "PLAYOFF_30",
+      "stage": "SEMI_FINALS",
+      "stage_ru": "Полуфинал",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-15",
+      "time": "15:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Atlanta",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_27",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_28",
+        "role": "winner"
+      },
+      "table_order": 30
+    },
+    "PLAYOFF_31": {
+      "id": "PLAYOFF_31",
+      "stage": "THIRD_PLACE",
+      "stage_ru": "Матч за 3-е место",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-18",
+      "time": "17:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "Miami (Miami Gardens)",
+      "channels": [],
+      "team1_source": {
+        "match_id": "PLAYOFF_29",
+        "role": "loser"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_30",
+        "role": "loser"
+      },
+      "table_order": 31
+    },
+    "PLAYOFF_32": {
+      "id": "PLAYOFF_32",
+      "stage": "FINAL",
+      "stage_ru": "Финал",
+      "group": null,
+      "group_ru": null,
+      "date": "2026-07-19",
+      "time": "15:00",
+      "timestamp": null,
+      "team1_code": null,
+      "team2_code": null,
+      "team1_name": null,
+      "team2_name": null,
+      "team1_name_ru": null,
+      "team2_name_ru": null,
+      "team1_id": null,
+      "team2_id": null,
+      "score": {
+        "team1": null,
+        "team2": null
+      },
+      "status": "TIMED",
+      "match_minute": null,
+      "venue": "New York/New Jersey (East Rutherford)",
+      "channels": [
+        "1"
+      ],
+      "team1_source": {
+        "match_id": "PLAYOFF_29",
+        "role": "winner"
+      },
+      "team2_source": {
+        "match_id": "PLAYOFF_30",
+        "role": "winner"
+      },
+      "table_order": 32
+    }
+  },
+  "updated_at": 1781301600.0
+}

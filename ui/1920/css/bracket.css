@@ -1,0 +1,174 @@
+@import './tokens.css';
+
+/* FragmentSportBracket — Stage 4 */
+
+#bracket_content_container {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  padding: var(--bracket-focus-border);
+  box-sizing: border-box;
+}
+
+#bracket_connectors,
+#bracket_cells_container,
+#bracket_labels_container {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#bracket_cells_container {
+  pointer-events: auto;
+}
+
+.bracket_pair_bar {
+  position: absolute;
+  width: 4px;
+  background: #FFFFFF;
+}
+
+.bracket_round_label {
+  position: absolute;
+  height: var(--bracket-label-line-height);
+  font-size: var(--bracket-label-text-size);
+  line-height: var(--bracket-label-line-height);
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.bracket_cell {
+  position: absolute;
+  width: var(--bracket-cell-width);
+  height: var(--bracket-cell-height);
+  box-sizing: border-box;
+  border-radius: var(--bracket-cell-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  padding: var(--bracket-cell-pad-v) var(--bracket-cell-pad-h);
+  outline: none;
+  overflow: visible;
+  cursor: default;
+}
+
+.bracket_cell.future {
+  background: #2A4057;
+  color: #A6FFFFFF;
+}
+
+.bracket_cell.available {
+  background: #1A2D42;
+  color: #FFFFFF;
+}
+
+.bracket_cell.live {
+  background: #BEE0C2;
+  color: #1A2D42;
+}
+
+.bracket_cell.selected {
+  background: #FFFFFF;
+  color: #010E21;
+}
+
+.bracket_cell.focused {
+  box-shadow: inset 0 0 0 var(--bracket-focus-border) #86DBFF;
+}
+
+.bracket_cell .meta_play_slot {
+  position: relative;
+  flex-shrink: 0;
+  min-width: var(--bracket-play-icon-size);
+  min-height: var(--bracket-play-icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bracket_cell .meta_text_col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bracket_cell .tv_date {
+  font-size: var(--bracket-meta-text-size);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.bracket_cell .tv_time {
+  font-size: var(--bracket-meta-text-size);
+  line-height: 1;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.bracket_cell.selected .tv_date,
+.bracket_cell.selected .tv_time {
+  color: rgba(1, 14, 33, 0.5);
+}
+
+.bracket_cell.live .tv_date,
+.bracket_cell.live .tv_time {
+  color: #1A2D42;
+}
+
+.bracket_cell .tv_time.hidden-for-play {
+  visibility: hidden;
+}
+
+.bracket_cell .iv_match_play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--bracket-play-icon-size);
+  height: var(--bracket-play-icon-size);
+  display: none;
+  background: currentColor;
+  -webkit-mask-image: url('../../assets/img/icons/ic_sport_play.svg');
+  mask-image: url('../../assets/img/icons/ic_sport_play.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.bracket_cell .iv_match_play.visible {
+  display: block;
+}
+
+.bracket_teams {
+  flex: 1;
+  min-width: 0;
+  margin-left: var(--bracket-cell-inner-gap);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+}
+
+.bracket_cell .tv_team_top,
+.bracket_cell .tv_team_bottom {
+  width: 100%;
+  font-size: var(--bracket-team-text-size);
+  line-height: 1.1;
+  font-weight: 500;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bracket_cell.selected .tv_team_top,
+.bracket_cell.selected .tv_team_bottom {
+  color: #010E21;
+}

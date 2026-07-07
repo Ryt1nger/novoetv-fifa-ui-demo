@@ -1,0 +1,185 @@
+#!/usr/bin/env node
+/** Enrich fifa2026-teams.json with api-sports ids (APK FifaTeamDto shape). */
+
+import { readFileSync, writeFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const teamsPath = join(root, 'mocks/fifa2026-teams.json');
+
+const API = 'https://media.api-sports.io/football/teams';
+
+/** api-sports national team id overrides (from matches + WC2026). */
+const API_ID = {
+  Czechia: 770,
+  Австралия: 20,
+  Австрия: 775,
+  Алжир: 4,
+  Англия: 10,
+  Аргентина: 26,
+  Бельгия: 1,
+  'Босния и Герцеговина': 1113,
+  Бразилия: 6,
+  Гаити: 2386,
+  Гана: 11,
+  Германия: 25,
+  'ДР Конго': 1504,
+  Египет: 32,
+  Иордания: 1558,
+  Ирак: 1567,
+  Иран: 22,
+  Испания: 9,
+  'Кабо-Верде': 553,
+  Катар: 1569,
+  Канада: 5529,
+  Колумбия: 23,
+  "Кот-д'Ивуар": 28,
+  Кюрасао: 5531,
+  Марокко: 31,
+  Мексика: 16,
+  Нидерланды: 1118,
+  'Новая Зеландия': 4673,
+  Норвегия: 1090,
+  Панама: 2361,
+  Парагвай: 761,
+  Португалия: 27,
+  'Саудовская Аравия': 23,
+  Сенегал: 13,
+  США: 771,
+  Тунис: 28,
+  Турция: 777,
+  Узбекистан: 1095,
+  Уругвай: 7,
+  Франция: 2,
+  Хорватия: 3,
+  Швейцария: 15,
+  Швеция: 5,
+  Шотландия: 257,
+  Эквадор: 238,
+  ЮАР: 1530,
+  'Южная Корея': 17,
+  Япония: 12,
+};
+
+const TLA = {
+  Czechia: 'CZE',
+  Австралия: 'AUS',
+  Австрия: 'AUT',
+  Алжир: 'ALG',
+  Англия: 'ENG',
+  Аргентина: 'ARG',
+  Бельгия: 'BEL',
+  'Босния и Герцеговина': 'BIH',
+  Бразилия: 'BRA',
+  Гаити: 'HAI',
+  Гана: 'GHA',
+  Германия: 'GER',
+  'ДР Конго': 'COD',
+  Египет: 'EGY',
+  Иордания: 'JOR',
+  Ирак: 'IRQ',
+  Иран: 'IRN',
+  Испания: 'ESP',
+  'Кабо-Верде': 'CPV',
+  Катар: 'QAT',
+  Канада: 'CAN',
+  Колумбия: 'COL',
+  "Кот-д'Ивуар": 'CIV',
+  Кюрасао: 'CUW',
+  Марокко: 'MAR',
+  Мексика: 'MEX',
+  Нидерланды: 'NED',
+  'Новая Зеландия': 'NZL',
+  Норвегия: 'NOR',
+  Панама: 'PAN',
+  Парагвай: 'PAR',
+  Португалия: 'POR',
+  'Саудовская Аравия': 'KSA',
+  Сенегал: 'SEN',
+  США: 'USA',
+  Тунис: 'TUN',
+  Турция: 'TUR',
+  Узбекистан: 'UZB',
+  Уругвай: 'URU',
+  Франция: 'FRA',
+  Хорватия: 'CRO',
+  Швейцария: 'SUI',
+  Швеция: 'SWE',
+  Шотландия: 'SCO',
+  Эквадор: 'ECU',
+  ЮАР: 'RSA',
+  'Южная Корея': 'KOR',
+  Япония: 'JPN',
+};
+
+const EN = {
+  Австралия: 'Australia',
+  Австрия: 'Austria',
+  Алжир: 'Algeria',
+  Англия: 'England',
+  Аргентина: 'Argentina',
+  Бельгия: 'Belgium',
+  'Босния и Герцеговина': 'Bosnia and Herzegovina',
+  Бразилия: 'Brazil',
+  Гаити: 'Haiti',
+  Гана: 'Ghana',
+  Германия: 'Germany',
+  'ДР Конго': 'DR Congo',
+  Египет: 'Egypt',
+  Иордания: 'Jordan',
+  Ирак: 'Iraq',
+  Иран: 'Iran',
+  Испания: 'Spain',
+  'Кабо-Верде': 'Cape Verde',
+  Катар: 'Qatar',
+  Канада: 'Canada',
+  Колумбия: 'Colombia',
+  "Кот-д'Ивуар": 'Ivory Coast',
+  Кюрасао: 'Curacao',
+  Марокко: 'Morocco',
+  Мексика: 'Mexico',
+  Нидерланды: 'Netherlands',
+  'Новая Зеландия': 'New Zealand',
+  Норвегия: 'Norway',
+  Панама: 'Panama',
+  Парагвай: 'Paraguay',
+  Португалия: 'Portugal',
+  'Саудовская Аравия': 'Saudi Arabia',
+  Сенегал: 'Senegal',
+  США: 'United States',
+  Тунис: 'Tunisia',
+  Турция: 'Turkey',
+  Узбекистан: 'Uzbekistan',
+  Уругвай: 'Uruguay',
+  Франция: 'France',
+  Хорватия: 'Croatia',
+  Швейцария: 'Switzerland',
+  Швеция: 'Sweden',
+  Шотландия: 'Scotland',
+  Эквадор: 'Ecuador',
+  ЮАР: 'South Africa',
+  'Южная Корея': 'South Korea',
+  Япония: 'Japan',
+};
+
+const raw = JSON.parse(readFileSync(teamsPath, 'utf8'));
+const out = { teams: {} };
+
+for (const [slot, team] of Object.entries(raw.teams)) {
+  const label = team.name_ru || team.name;
+  const apiId = API_ID[label] || team.id;
+  const entry = {
+    id: apiId,
+    slot: parseInt(slot, 10),
+    name: team.name || EN[label] || label,
+    name_ru: team.name_ru || (label === 'Czechia' ? null : label),
+    tla: TLA[label] || team.tla || null,
+    crest: `${API}/${apiId}.png`,
+  };
+  if (!entry.name_ru && label !== 'Czechia') entry.name_ru = label;
+  out.teams[slot] = entry;
+}
+
+writeFileSync(teamsPath, JSON.stringify(out, null, 2) + '\n');
+console.log('Updated', teamsPath, '—', Object.keys(out.teams).length, 'teams');

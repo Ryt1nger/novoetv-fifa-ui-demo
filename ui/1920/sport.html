@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>ЧМ FIFA 2026 — sport shell</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sport.css">
+</head>
+<body>
+  <div id="tv-stage">
+    <div id="sport_root" class="screen">
+      <div id="sport_rail">
+        <div id="sport_rail_buttons">
+          <div id="btn_sport_back" aria-hidden="true"></div>
+          <button type="button" id="btn_sport_rail_schedule" class="sport-rail-btn"></button>
+          <button type="button" id="btn_sport_rail_bracket" class="sport-rail-btn"></button>
+          <button type="button" id="btn_sport_rail_my_team" class="sport-rail-btn"></button>
+        </div>
+      </div>
+
+      <h1 id="tv_sport_title"></h1>
+
+      <div id="sport_tabs_container">
+        <div id="sport_tab_track"></div>
+        <div id="sport_tabs"></div>
+      </div>
+
+      <div id="sport_pager">
+        <div id="sport_schedule_root" class="sport-page" data-page="schedule"></div>
+        <div id="bracket_content_container" class="sport-page preview-hidden" data-page="bracket"></div>
+        <div id="sport_my_team_root" class="sport-page preview-hidden" data-page="my_team"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/fifa-data.js"></script>
+  <script src="../js/sport-ui.js"></script>
+  <script>
+    document.documentElement.classList.add('audit-mode');
+    FifaData.loadAll().then(function () {
+      SportUI.init(FifaData.getMenu());
+      SportUI.applyState({ activeTab: 'schedule', railFocus: null, tabFocus: 'schedule' });
+    });
+  </script>
+</body>
+</html>

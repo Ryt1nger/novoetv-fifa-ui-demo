@@ -1,0 +1,9 @@
+{
+  "matchId": "demo-playable",
+  "sources": [
+    { "id": "ch1", "title": "Матч! ТВ HD." },
+    { "id": "ch2", "title": "Матч! ТВ HD Premium." },
+    { "id": "ch3", "title": "Матч! ТВ Premium." },
+    { "id": "ch4", "title": "Матч! ТВ." }
+  ]
+}

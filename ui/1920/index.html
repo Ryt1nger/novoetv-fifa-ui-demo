@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>ЧМ FIFA 2026 — sport shell (preview)</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sport.css">
+  <link rel="stylesheet" href="css/schedule.css">
+  <link rel="stylesheet" href="css/bracket.css">
+  <link rel="stylesheet" href="css/broadcast.css">
+  <link rel="stylesheet" href="css/my-team.css">
+</head>
+<body class="dev-mode">
+
+  <div id="tv-viewport">
+    <div id="tv-stage">
+      <div id="sport_root" class="screen">
+        <div id="sport_rail">
+          <div id="sport_rail_buttons">
+            <div id="btn_sport_back" aria-hidden="true"></div>
+            <button type="button" id="btn_sport_rail_schedule" class="sport-rail-btn"></button>
+            <button type="button" id="btn_sport_rail_bracket" class="sport-rail-btn"></button>
+            <button type="button" id="btn_sport_rail_my_team" class="sport-rail-btn"></button>
+          </div>
+        </div>
+
+        <h1 id="tv_sport_title">Чемпионат мира по футболу FIFA 2026</h1>
+
+        <div id="sport_tabs_container">
+          <div id="sport_tab_track"></div>
+          <div id="sport_tabs"></div>
+        </div>
+
+        <div id="sport_pager">
+          <div id="sport_schedule_root" class="sport-page" data-page="schedule">
+            <div id="rv_sport_schedule"></div>
+            <div id="sport_schedule_error_container" class="preview-hidden">
+              <div id="tv_schedule_error">Не удалось загрузить расписание</div>
+              <button type="button" id="btn_schedule_retry">Повторить</button>
+            </div>
+            <button type="button" id="btn_schedule_scroll_top" class="preview-hidden">Вверх</button>
+          </div>
+          <div id="bracket_content_container" class="sport-page preview-hidden" data-page="bracket"></div>
+          <div id="sport_my_team_root" class="sport-page preview-hidden" data-page="my_team"></div>
+        </div>
+      </div>
+
+      <div id="sport_sources_dialog_root" class="preview-hidden" aria-hidden="true">
+        <div id="sport_sources_panel">
+          <div id="sport_sources_list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dev-panel">
+    <div class="dev-bar">
+      <button type="button" id="dev-collapse" class="dev-icon" title="Свернуть">▾</button>
+      <div class="dev-tabs">
+        <button type="button" data-screen-tab="schedule" class="active">Расп.</button>
+        <button type="button" data-screen-tab="bracket">Сетка</button>
+        <button type="button" data-screen-tab="my_team">Моя</button>
+      </div>
+      <select id="dev-audit-presets" title="Audit preset"><option value="">audit…</option></select>
+      <button type="button" id="btn-broadcast-back" class="preview-hidden" title="Закрыть каналы">back</button>
+      <button type="button" id="btn-reload-mocks" class="dev-icon" title="Моки">↻</button>
+      <button type="button" id="dev-more-toggle" class="dev-icon" title="Ещё">⋯</button>
+      <span id="dev-status">—</span>
+    </div>
+    <div id="dev-more" class="dev-more preview-hidden">
+      <button type="button" id="btn-schedule-toggle-error">ошибка</button>
+      <button type="button" id="btn-schedule-toggle-scroll-top">вверх</button>
+      <button type="button" id="btn-bracket-focus-playable">play</button>
+      <button type="button" id="btn-myteam-select-belgium">бельгия</button>
+      <button type="button" id="btn-broadcast-show">каналы</button>
+      <button type="button" id="btn-broadcast-hide">скрыть</button>
+    </div>
+  </div>
+
+  <script src="../js/fifa-data.js"></script>
+  <script src="../js/fifa-flag.js"></script>
+  <script src="../js/fifa-schedule-mapper.js"></script>
+  <script src="../js/fifa-bracket-layout.js"></script>
+  <script src="../js/fifa-bracket-mapper.js"></script>
+  <script src="../js/schedule-ui.js"></script>
+  <script src="../js/bracket-ui.js"></script>
+  <script src="../js/fifa-teams-mapper.js"></script>
+  <script src="../js/fifa-my-team-filter.js"></script>
+  <script src="../js/broadcast-ui.js"></script>
+  <script src="../js/my-team-ui.js"></script>
+  <script src="../js/sport-ui.js"></script>
+  <script src="../js/sport-pointer.js"></script>
+  <script src="../js/app-preview.js"></script>
+  <script>AppPreview.init();</script>
+</body>
+</html>

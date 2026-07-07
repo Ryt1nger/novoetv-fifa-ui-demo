@@ -1,0 +1,241 @@
+@import './tokens.css';
+
+/* FragmentSport shell — Stage 2 */
+
+#sport_root {
+  background: var(--sport-bg);
+  overflow: hidden;
+}
+
+/* —— Rail —— */
+#sport_rail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sport-rail-width);
+  background: var(--sport-rail-bg);
+}
+
+#sport_rail_buttons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - var(--sport-rail-offset-x)), calc(-50% - var(--sport-rail-offset-y)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn_sport_back {
+  width: var(--sport-rail-btn-width);
+  height: var(--sport-rail-btn-height);
+  border-radius: var(--sport-rail-btn-radius);
+  background: var(--sport-rail-item-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.rail-icon,
+.iv_tab_icon {
+  display: block;
+  background: currentColor;
+  -webkit-mask-image: var(--icon-url);
+  mask-image: var(--icon-url);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.rail-icon {
+  width: var(--sport-rail-icon-size);
+  height: var(--sport-rail-icon-size);
+  flex-shrink: 0;
+}
+
+.rail-back-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.sport-rail-btn {
+  margin: 0;
+  padding: 0;
+  width: var(--sport-rail-btn-width);
+  height: var(--sport-rail-btn-height);
+  border: none;
+  border-radius: var(--sport-rail-btn-radius);
+  background: var(--sport-rail-item-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  outline: none;
+  color: var(--sport-rail-icon-default);
+  box-sizing: border-box;
+}
+
+#btn_sport_rail_schedule {
+  margin-top: var(--sport-rail-back-gap);
+}
+
+#btn_sport_rail_bracket,
+#btn_sport_rail_my_team {
+  margin-top: var(--sport-rail-item-gap);
+}
+
+
+.sport-rail-btn.selected {
+  background: var(--sport-rail-item-bg-selected);
+  color: var(--sport-rail-icon-active);
+}
+
+.sport-rail-btn.focused {
+  background: var(--sport-rail-item-bg-focused);
+  color: var(--sport-rail-icon-active);
+}
+
+.sport-rail-btn.selected.focused {
+  background: var(--sport-rail-item-bg-focused);
+}
+
+/* —— Title —— */
+#tv_sport_title {
+  position: absolute;
+  left: var(--sport-rail-width);
+  right: var(--sport-content-margin-end);
+  top: var(--sport-title-margin-top);
+  margin: 0;
+  padding: 0;
+  font-size: var(--sport-title-text-size);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--sport-title-text);
+  text-align: left;
+}
+
+/* —— Tabs —— */
+#sport_tabs_container {
+  position: absolute;
+  left: var(--sport-rail-width);
+  right: var(--sport-content-margin-end);
+  top: calc(
+    var(--sport-title-margin-top) + var(--sport-title-text-size) + var(--sport-tabs-margin-top)
+  );
+  height: auto;
+  padding-bottom: var(--sport-tab-indicator-height);
+}
+
+#sport_tab_track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--sport-tab-indicator-height);
+  background: var(--sport-tab-track-inactive);
+  pointer-events: none;
+}
+
+#sport_tabs {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sport-tab-spacing);
+  position: relative;
+  z-index: 1;
+}
+
+.sport-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  outline: none;
+  min-width: 0;
+  color: var(--sport-tab-text);
+}
+
+.sport-tab.selected {
+  color: var(--sport-tab-text-selected);
+}
+
+.tab_content_row {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sport-tab-item-padding-h);
+}
+
+.tab-icon-wrap {
+  padding: 0 var(--sport-tab-icon-padding-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iv_tab_icon {
+  width: var(--sport-tab-icon-size);
+  height: var(--sport-tab-icon-size);
+}
+
+.tv_tab_label {
+  margin-left: var(--sport-tab-icon-text-gap);
+  font-size: var(--sport-tab-text-size);
+  font-weight: 500;
+  line-height: 1;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.tab_indicator {
+  margin-top: var(--sport-tab-content-indicator-gap);
+  height: var(--sport-tab-indicator-height);
+  background: transparent;
+  border-radius: 0;
+}
+
+.sport-tab.selected .tab_indicator {
+  background: var(--sport-tab-indicator);
+}
+
+.sport-tab.focused .tab_content_row {
+  color: #FFFFFF;
+}
+
+.sport-tab.focused .iv_tab_icon {
+  color: #FFFFFF;
+}
+
+/* —— Pager (content slots — Stage 3+) —— */
+#sport_pager {
+  position: absolute;
+  left: var(--sport-rail-width);
+  right: var(--sport-content-margin-end);
+  top: calc(
+    var(--sport-title-margin-top) + var(--sport-title-text-size) + var(--sport-tabs-margin-top) +
+    var(--sport-tab-icon-size) + var(--sport-tab-content-indicator-gap) +
+    var(--sport-tab-indicator-height) + var(--sport-pager-margin-top)
+  );
+  bottom: 0;
+  overflow: hidden;
+}
+
+#sport_pager.bracket-active {
+  overflow: visible;
+}
+
+.sport-page {
+  position: absolute;
+  inset: 0;
+}

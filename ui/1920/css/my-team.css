@@ -1,0 +1,321 @@
+@import './tokens.css';
+
+/* FragmentSportMyTeam — Stage 5 */
+
+#sport_my_team_root {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+#my_team_countries_panel {
+  flex-shrink: 0;
+  width: 1070px;
+  background: var(--my-team-panel-bg);
+  border-radius: var(--my-team-panel-radius);
+  overflow: hidden;
+}
+
+#rv_my_team_countries {
+  display: grid;
+  grid-template-columns: repeat(3, 348px);
+  grid-auto-rows: 50px;
+  column-gap: 0;
+  row-gap: 0;
+  padding: var(--my-team-panel-pad-v) var(--my-team-panel-edge);
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  align-content: start;
+}
+
+#rv_my_team_countries::-webkit-scrollbar {
+  display: none;
+}
+
+.country_chip_root {
+  position: relative;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+
+.country_chip_root.focused {
+  background: rgba(134, 219, 255, 0.22);
+}
+
+.country_chip_root .tv_country_name {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #FFFFFF;
+  padding: 0 16px 0 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.country_chip_root.focused .tv_country_name {
+  color: #FF7C00;
+}
+
+.my_team_bullet {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: none;
+  background: #FF7C00;
+}
+
+.my_team_bullet.visible {
+  display: block;
+}
+
+#rv_my_team_schedule {
+  flex: 1;
+  min-width: 0;
+  margin-left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 20px 112px 0;
+  scrollbar-width: none;
+}
+
+#rv_my_team_schedule::-webkit-scrollbar {
+  display: none;
+}
+
+#tv_my_team_schedule_empty {
+  position: absolute;
+  left: 1070px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 40px;
+}
+
+.my_team_section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 46px;
+}
+
+.my_team_section .date_block {
+  width: var(--my-team-date-col-width);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.my_team_section .tv_date,
+.my_team_section .tv_day_of_week {
+  font-size: var(--schedule-date-text-size);
+  line-height: var(--schedule-date-line-height);
+  color: var(--schedule-date-text);
+  font-feature-settings: 'tnum';
+}
+
+.my_team_section .rv_section_matches {
+  width: var(--my-team-match-width);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my_team_match {
+  height: var(--my-team-match-height);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.my_team_match.available {
+  background: #1A2D42;
+  color: #FFFFFF;
+}
+
+.my_team_match.future {
+  background: #2A4057;
+  color: #A6FFFFFF;
+}
+
+.my_team_match.live {
+  background: #BEE0C2;
+  color: #1A2D42;
+}
+
+.my_team_match.selected {
+  background: #FFFFFF;
+  color: #010E21;
+  border-color: transparent;
+}
+
+.my_team_match.selected .tv_time {
+  color: rgba(1, 14, 33, 0.5);
+}
+
+.my_team_match.selected .tv_team_home,
+.my_team_match.selected .tv_team_away {
+  color: #010E21;
+}
+
+.my_team_match.focused {
+  outline: var(--my-team-focus-border) solid #86DBFF;
+  outline-offset: 0;
+}
+
+.my_team_match .meta_play_slot {
+  position: relative;
+  flex-shrink: 0;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my_team_match .tv_time {
+  font-size: var(--my-team-match-time-size);
+  font-weight: 400;
+  text-align: center;
+}
+
+.my_team_match .tv_time.hidden-for-play {
+  visibility: hidden;
+}
+
+.my_team_match .iv_match_play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: none;
+  background: currentColor;
+  -webkit-mask-image: url('../../assets/img/icons/ic_sport_play.svg');
+  mask-image: url('../../assets/img/icons/ic_sport_play.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.my_team_match .iv_match_play.visible {
+  display: block;
+}
+
+.my_team_match_teams {
+  flex: 1;
+  min-width: 0;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.my_team_team_row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+.my_team_match .tv_team_home,
+.my_team_match .tv_team_away {
+  font-size: var(--my-team-match-team-size);
+  font-weight: 500;
+  max-width: 360px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.my_team_match .flag_slot {
+  width: 32px;
+  height: 26px;
+  margin-left: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my_team_match .iv_flag {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.my_team_match .flag_placeholder {
+  width: 28px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+.my_team_match .score_container.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.my_team_match .score_container .tv_score_home,
+.my_team_match .score_container .tv_score_away {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  color: #010E21;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.my_team_match.future .score_container .tv_score_home,
+.my_team_match.future .score_container .tv_score_away {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.my_team_match.selected .score_container .tv_score_home,
+.my_team_match.selected .score_container .tv_score_away {
+  background: #1A2D42;
+  color: #FFFFFF;
+}
+
+.my_team_match.live .score_container .tv_score_home,
+.my_team_match.live .score_container .tv_score_away {
+  background: #1A2D42;
+  color: #FFFFFF;
+}
